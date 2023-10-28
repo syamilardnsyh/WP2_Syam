@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Form Input Data Siswa</h1>
-        <?php echo form_open('siswaControllers/process_input'); ?>     
+        <?php echo form_open('siswaController/process_input'); ?>     
         <br><label for="nama">Nama Siswa :</label>
         <input type="text" name="nama" id="nama">
 

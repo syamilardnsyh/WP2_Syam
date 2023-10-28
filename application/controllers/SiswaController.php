@@ -1,5 +1,5 @@
 <?php
-class SiswaControllers extends CI_Controller {
+class SiswaController extends CI_Controller {
     public function input_data() {
         // Load form helper and view
         $this->load->helper('form');

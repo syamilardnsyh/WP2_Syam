@@ -117,7 +117,7 @@
           <div class="col">
             <h6>Best Seller</h6>
             <div class="card" style="width: 9rem;">
-              <img src="kemeja/kemeja pendek/kemeja putih pendek.png" class="card-img-top" alt="">
+              <img src="../kemeja/kemeja pendek/kemeja putih pendek.png" class="card-img-top" alt="">
               <div class="card-body">
                 <h5 class="card-title" style="font-size: 0.8rem;">Kemeja Putih Pendek</h5>
                 <!---->
@@ -128,7 +128,7 @@
           <div class="col">
             <h6>Best Seller</h6>
             <div class="card" style="width: 9rem;">
-              <img src="kemeja/kemeja putih penjang/pngwing.com.png" class="card-img-top" alt="">
+              <img src="../kemeja/kemeja pendek/kemeja putih pendek.png" class="card-img-top" alt="">
               <div class="card-body">
                 <h5 class="card-title" style="font-size: 0.8rem;">Kemeja Putih Panjang</h5>
                 <!---->
