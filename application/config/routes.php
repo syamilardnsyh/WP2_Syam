@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'Login';
 $route['register'] = 'Register';
 $route['forgot_password'] = 'Forgot Password';
+$route['siswaControllers/input_data'] = 'siswaControllers/input_data';
+$route['siswaControllers/process_input'] = 'siswaControllers/process_input';
