@@ -1,15 +1,20 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
-
 class Project extends CI_Controller {
-
-    function __construct(){
-        parent::__construct();
+    public function halaman_web() {
+        // Load form helper and view
         $this->load->helper('url');
+        $this->load->view('v_home');
     }
+    
+    public function home() {
+        // Proses halaman website
+        // Simpan data siswa ke database atau tempat penyimpanan lainnya
 
-    public function index() {
-        $data['judul'] = "Halaman Depan";
-        $this->load->view('v_home',$data);
+        // Tampilkan hasil submit
+        $data['result'] = $_POST; // Anda dapat mengubah ini sesuai dengan metodenya
+
+        $this->load->view('v_home', $data);
+        $this->load->view('login_view', $data);
     }
 }
+?>
