@@ -13,8 +13,7 @@ class Project extends CI_Controller {
         // Tampilkan hasil submit
         $data['result'] = $_POST; // Anda dapat mengubah ini sesuai dengan metodenya
 
-        $this->load->view('v_home', $data);
-        $this->load->view('login_view', $data);
+        $this->load->view('v_home', 'login_view',);
     }
 }
 ?>
