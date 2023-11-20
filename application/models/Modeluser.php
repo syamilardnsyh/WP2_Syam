@@ -29,3 +29,7 @@ class ModelUser extends CI_Model
         return $this->db->get();
     }
 }
+function cekData($where = null)
+{
+    return $this->db->get_where('user', $where);
+}
