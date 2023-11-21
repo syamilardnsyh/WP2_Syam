@@ -3,14 +3,9 @@ class Autentifikasi extends CI_Controller
 {
     public function index()
     {
-        // echo password_hash("123", PASSWORD_DEFAULT);die;
-
-        // Jika statusnya sudah login, maka tidak bisa mengakses halaman login 
-        // alias dikembalikan ke tampilan user
-        // session_destroy();die;
-        if ($this->session->userdata('role_id')==2) {
+        if ($this->session->userdata('role_id') == 2) {
             redirect('user');
-        } elseif ($this->session->userdata('role_id')==1) {
+        } elseif ($this->session->userdata('role_id') == 1) {
             redirect('admin');
         }
 
@@ -26,7 +21,6 @@ class Autentifikasi extends CI_Controller
             $data['judul'] = 'Login';
             $data['user'] = '';
 
-            // Kata 'login' merupakan nilai dari variabel judul dalam array $data dikirimkan ke view aute_header
             $this->load->view('templates/aute_header', $data);
             $this->load->view('autentifikasi/login');
             $this->load->view('templates/aute_footer');
@@ -41,11 +35,8 @@ class Autentifikasi extends CI_Controller
         $password = $this->input->post('password', true);
         $user = $this->ModelUser->cekData(['email' => $email])->row_array();
 
-        // Jika usernya ada
         if ($user) {
-            // Jika user sudah aktif
             if ($user['is_active'] == 1) {
-                // Cek password
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'email' => $user['email'],
@@ -73,6 +64,16 @@ class Autentifikasi extends CI_Controller
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Email tidak terdaftar!!</div>');
             redirect('autentifikasi');
         }
+    }
+
+    public function blok()
+    {
+        $this->load->view('autentifikasi/blok');
+    }
+
+    public function gagal()
+    {
+        $this->load->view('autentifikasi/gagal');
     }
 }
 ?>

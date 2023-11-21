@@ -55,12 +55,11 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['Project/home'] = 'home';
 $route['Login/index'] = 'login';
-<<<<<<< HEAD
+
 $route['Register/index'] = 'register';
-=======
+
 $route['Register/index'] = 'register';
 
 $route['forgot_password'] = 'forgot password';
 $route['siswaControllers/input_data'] = 'siswaControllers/input_data';
 $route['siswaControllers/process_input'] = 'siswaControllers/process_input';
->>>>>>> 429b8589cab280b4fea178eaee0208fad263dfed
